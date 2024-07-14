@@ -331,7 +331,6 @@ a {
 .inst {
     width: 44px;
     height: 44px;
-    z-index: 2;
 }
 
 .inst:hover {
