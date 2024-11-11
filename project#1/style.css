@@ -6,6 +6,7 @@ body {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -78,6 +79,8 @@ a {
     background-color: #2196F3;
 
     opacity: 0;
+
+
 }
 
 .nav-el:hover::after {
@@ -98,6 +101,7 @@ a {
 .email,
 .phone {
     font-weight: 500;
+    transition: all 0.2s ease-in-out;
 }
 
 .email:hover,
@@ -147,6 +151,7 @@ a {
     font-family: Roboto;
     background: #F5F4FA;
 
+    transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -197,6 +202,8 @@ a {
 .grid {
     border: 1px solid #EEEEEE;
     position: relative;
+
+    transition: all 0.4s ease-in-out;
 }
 
 .grid:hover {
@@ -225,24 +232,35 @@ a {
     margin-right: 24px;
 
     opacity: 0;
+
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
 }
 
 .grid:hover .grid-text {
     opacity: 1;
+    transform: translateX(0);
 }
 
-.grid:hover::before {
+.grid::before {
     content: '';
 
     position: absolute;
     background-color: #2196F3E5;
-    opacity: 0.9;
+    opacity: 0;
 
-    width: 100%;
+    width: 100.5%;
     height: 75.8%;
+
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
 
 }
 
+.grid:hover::before {
+    opacity: 0.9;
+    transform: translateX(0);
+}
 
 /* .grid:hover::after {
     content: '';
